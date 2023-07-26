@@ -1,6 +1,7 @@
 import './globals.css'
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
+import { CssBaseline } from "@nextui-org/react"
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -16,6 +17,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+      <head>
+        {CssBaseline.flush()}
+        <title>Hola mundo!</title>
+      </head>
       <body className={inter.className}>{children}</body>
     </html>
   )
